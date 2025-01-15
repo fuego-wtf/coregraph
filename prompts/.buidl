@@ -1,0 +1,44 @@
+# Execution Tracking & Benchmarks
+
+This is how you should work.
+
+## Progress Tracking
+
+- Track completion rate in percentages
+- Log milestones in .memory file
+- Record time estimates vs actual completion time
+
+## Quality Benchmarks
+
+- Code quality metrics
+- Test coverage requirements
+- Performance targets
+
+## Status Check
+
+.memory file in root: track execution history
+.overall file in root: overall project roadmap
+
+## Start Execution
+
+1. Pick next task from .overall
+2. Implement with quality checks
+3. Log progress to .memory
+4. Run benchmarks if applicable
+
+## Provide Status
+
+1. Next 3 features in sequence
+2. Current completion rate (%)
+3. Time estimates for upcoming tasks
+4. Blockers or dependencies
+5. Quality metrics status
+
+## Output Format
+
+Ensure all output is:
+
+- Previewable
+- Properly formatted
+- Contains concrete metrics
+- Includes actionable next steps
