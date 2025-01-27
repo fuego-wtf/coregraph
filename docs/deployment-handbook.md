@@ -30,13 +30,13 @@ subgraph Production Environment
     MEMG[Memgraph]
     QD[Qdrant]
     PG[PostgreSQL]
-    REDIS[Redis]
+    REDIS[Redis Cluster]
     end
     
-    subgraph Message Queue
-    RMQ1[RabbitMQ-1]
-    RMQ2[RabbitMQ-2]
-    RMQ3[RabbitMQ-3]
+    subgraph Message Layer
+    REDIS1[Redis-1]
+    REDIS2[Redis-2]
+    REDIS3[Redis-3]
     end
 end
 
@@ -47,9 +47,9 @@ API --> PROC
 API --> GRAPH
 API --> VECTOR
 PROC --> WORKER
-WORKER --> RMQ1
-WORKER --> RMQ2
-WORKER --> RMQ3
+WORKER --> REDIS1
+WORKER --> REDIS2
+WORKER --> REDIS3
 ```
 
 ## System Architecture

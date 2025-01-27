@@ -1,13 +1,15 @@
-import { Kafka } from 'kafkajs';
+import Redis from 'ioredis';
 import { createConnection } from 'memgraph';
 import { QdrantClient } from '@qdrant/js-client';
 
 class ChunkProcessor {
   constructor() {
-    this.kafka = new Kafka({
-      clientId: 'chunk-processor',
-      brokers: ['localhost:9092']
+    this.redis = new Redis({
+      host: process.env.REDIS_HOST || 'localhost',
+      port: process.env.REDIS_PORT || 6379,
     });
+
+    this.subscriber = this.redis.duplicate();
 
     this.memgraph = createConnection({
       host: 'localhost',
@@ -19,7 +21,9 @@ class ChunkProcessor {
     });
   }
 
-  async processChunk(chunk, metadata) {
+  async processChunk(data) {
+    const { chunk, metadata } = data;
+    
     // Store graph structure in Memgraph
     const cypher = `
       MERGE (c:Chunk {id: $chunkId})
@@ -46,15 +50,15 @@ class ChunkProcessor {
   }
 
   async start() {
-    const consumer = this.kafka.consumer({ groupId: 'chunk-processors' });
-    await consumer.connect();
-    await consumer.subscribe({ topic: 'data-chunks' });
-
-    await consumer.run({
-      eachMessage: async ({ message }) => {
-        const { chunk, metadata } = JSON.parse(message.value.toString());
-        await this.processChunk(chunk, metadata);
+    await this.subscriber.subscribe('data-chunks');
+    
+    this.subscriber.on('message', async (channel, message) => {
+      if (channel === 'data-chunks') {
+        const data = JSON.parse(message);
+        await this.processChunk(data);
       }
     });
   }
-} 
+}
+
+export default ChunkProcessor;

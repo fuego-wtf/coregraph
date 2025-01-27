@@ -3,7 +3,7 @@ import { AgenticClient } from '../src/sdk/AgenticClient';
 async function main() {
   // Initialize client
   const client = new AgenticClient({
-    endpoint: 'https://api.agentic.os',
+    endpoint: 'https://api.graphyn.xyz/v1',
     chunkSize: 2 * 1024 * 1024 // 2MB chunks
   });
 

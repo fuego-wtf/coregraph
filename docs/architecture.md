@@ -53,7 +53,7 @@ This document describes the architecture of a secure, scalable microservices-bas
 - **Purpose**: Handle encrypted file operations
 - **Implementation**:
 - Node.js
-- RabbitMQ for async operations
+- Redis for async operations
 - **Key Features**:
 - Chunked file upload/download
 - Client-side encryption coordination
@@ -98,19 +98,19 @@ This document describes the architecture of a secure, scalable microservices-bas
 - Geographic redundancy
 
 #### 2.2 Message Queue Architecture
-- **Technology**: RabbitMQ
-- **Exchange Types**:
-- Direct: Service-to-service communication
-- Fanout: Broadcast events
-- Topic: Filtered subscriptions
-- **Queue Patterns**:
-- Dead letter queues
-- Retry queues
-- Priority queues
-- **Message Security**:
-- Message signing
-- Encrypted payloads
-- Access control
+- **Technology**: Redis Pub/Sub
+- **Patterns**:
+- Direct messaging for service-to-service
+- Channel-based broadcasting
+- Pattern-based subscriptions
+- **Features**:
+- In-memory message persistence
+- Channel-based routing
+- Lightweight pub/sub model
+- **Security**:
+- Message encryption
+- Channel access control
+- Client authentication
 
 ### 3. Security Architecture
 
