@@ -1,0 +1,440 @@
+{
+  "result": [
+    {
+      "scriptId": "647",
+      "url": "file:///Users/resatugurulu/Developer/coregraph/src/app.js",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 1576,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "buildApp",
+          "ranges": [
+            {
+              "startOffset": 590,
+              "endOffset": 1547,
+              "count": 1
+            },
+            {
+              "startOffset": 883,
+              "endOffset": 1546,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "941",
+      "url": "file:///Users/resatugurulu/Developer/coregraph/src/plugins/supabase.js",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 452,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "supabasePlugin",
+          "ranges": [
+            {
+              "startOffset": 163,
+              "endOffset": 413,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "1010",
+      "url": "file:///Users/resatugurulu/Developer/coregraph/src/plugins/redis.js",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 385,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "redisPlugin",
+          "ranges": [
+            {
+              "startOffset": 148,
+              "endOffset": 349,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "1070",
+      "url": "file:///Users/resatugurulu/Developer/coregraph/src/plugins/auth.js",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 1118,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "authPlugin",
+          "ranges": [
+            {
+              "startOffset": 91,
+              "endOffset": 1083,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "1112",
+      "url": "file:///Users/resatugurulu/Developer/coregraph/src/plugins/rateLimit.js",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 1889,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "rateLimitPlugin",
+          "ranges": [
+            {
+              "startOffset": 54,
+              "endOffset": 1607,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "setRateLimitHeaders",
+          "ranges": [
+            {
+              "startOffset": 1645,
+              "endOffset": 1849,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "1113",
+      "url": "file:///Users/resatugurulu/Developer/coregraph/src/plugins/errorHandler.js",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 1927,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "AppError",
+          "ranges": [
+            {
+              "startOffset": 109,
+              "endOffset": 263,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "ValidationError",
+          "ranges": [
+            {
+              "startOffset": 310,
+              "endOffset": 381,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "AuthError",
+          "ranges": [
+            {
+              "startOffset": 422,
+              "endOffset": 487,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "NotFoundError",
+          "ranges": [
+            {
+              "startOffset": 532,
+              "endOffset": 596,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "errorHandler",
+          "ranges": [
+            {
+              "startOffset": 600,
+              "endOffset": 1890,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 930,
+              "endOffset": 1724,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 1780,
+              "endOffset": 1886,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "1114",
+      "url": "file:///Users/resatugurulu/Developer/coregraph/src/services/graphEngine.js",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 1900,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "GraphEngine",
+          "ranges": [
+            {
+              "startOffset": 166,
+              "endOffset": 272,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "addNode",
+          "ranges": [
+            {
+              "startOffset": 398,
+              "endOffset": 810,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "addEdge",
+          "ranges": [
+            {
+              "startOffset": 960,
+              "endOffset": 1228,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "queryNodes",
+          "ranges": [
+            {
+              "startOffset": 1346,
+              "endOffset": 1866,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "1115",
+      "url": "file:///Users/resatugurulu/Developer/coregraph/src/services/paymentService.js",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 858,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "PaymentService",
+          "ranges": [
+            {
+              "startOffset": 170,
+              "endOffset": 250,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "createCheckoutSession",
+          "ranges": [
+            {
+              "startOffset": 523,
+              "endOffset": 821,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "1298",
+      "url": "file:///Users/resatugurulu/Developer/coregraph/src/routes/graphRoutes.js",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 1732,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "graphRoutes",
+          "ranges": [
+            {
+              "startOffset": 15,
+              "endOffset": 1700,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "1299",
+      "url": "file:///Users/resatugurulu/Developer/coregraph/src/routes/paymentRoutes.js",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 730,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "paymentRoutes",
+          "ranges": [
+            {
+              "startOffset": 15,
+              "endOffset": 696,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "1300",
+      "url": "file:///Users/resatugurulu/Developer/coregraph/src/routes/authRoutes.js",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 2173,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "authRoutes",
+          "ranges": [
+            {
+              "startOffset": 53,
+              "endOffset": 2142,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    }
+  ],
+  "timestamp": 5110.580667,
+  "source-map-cache": {}
+}

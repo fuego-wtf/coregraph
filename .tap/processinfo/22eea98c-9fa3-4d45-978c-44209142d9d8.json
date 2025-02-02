@@ -1,0 +1,249 @@
+{
+  "date": "2025-02-02T15:47:35.450Z",
+  "argv": [
+    "/usr/local/bin/node",
+    "/Users/resatugurulu/Developer/coregraph/test/routes/auth.test.js"
+  ],
+  "execArgv": [
+    "--import=file:///Users/resatugurulu/Developer/coregraph/node_modules/@isaacs/ts-node-temp-fork-for-pr-2009/import.mjs",
+    "--import=file:///Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/import.mjs",
+    "--enable-source-maps",
+    "--import=file:///Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/processinfo/dist/esm/import.mjs"
+  ],
+  "NODE_OPTIONS": "\"--import=file:///Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/processinfo/dist/esm/import.mjs\"",
+  "cwd": "/Users/resatugurulu/Developer/coregraph",
+  "pid": 41502,
+  "ppid": 41472,
+  "parent": null,
+  "uuid": "22eea98c-9fa3-4d45-978c-44209142d9d8",
+  "files": [
+    "/Users/resatugurulu/Developer/coregraph/test/routes/auth.test.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@isaacs/ts-node-temp-fork-for-pr-2009/import.mjs",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@isaacs/ts-node-temp-fork-for-pr-2009/import-loader.mjs",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/import.mjs",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/mock-service.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/stack/dist/esm/index.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/index.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/is-relative-require.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/export-line.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/munge-mocks.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/resolve-mock-entry-point.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/service-key.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/stack/dist/esm/call-site-like.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/stack/dist/esm/require-resolve.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/get-all-conditional-values.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/get-all-conditions.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/get-unique-condition-sets.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-all-exports.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-all-local-imports.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-conditional-value.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-import.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/is-windows.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/errors.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/file-exists.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-dependency-export.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-package-import.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/to-file-url.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/to-path.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/get-named-exports-list.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/read-pkg.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-export.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/star-glob.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/find-dep-package.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/get-conditional-values-list.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/stack/dist/esm/parse.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/walk-up-path/dist/mjs/index.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/read-json.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/find-star-match.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/index.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/glob.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/dist/esm/index.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/has-magic.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/ignore.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/dist/esm/assert-valid-pattern.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/dist/esm/ast.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/dist/esm/escape.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/dist/esm/unescape.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/pattern.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/walker.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/path-scurry/dist/esm/index.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/dist/esm/brace-expressions.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/lru-cache/dist/esm/index.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/minipass/dist/esm/index.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/processor.js",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/loader.mjs",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/hooks.mjs",
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/mock-service-client.js",
+    "/Users/resatugurulu/Developer/coregraph/src/app.js",
+    "/Users/resatugurulu/Developer/coregraph/src/plugins/supabase.js",
+    "/Users/resatugurulu/Developer/coregraph/src/plugins/redis.js",
+    "/Users/resatugurulu/Developer/coregraph/src/plugins/auth.js",
+    "/Users/resatugurulu/Developer/coregraph/src/plugins/rateLimit.js",
+    "/Users/resatugurulu/Developer/coregraph/src/plugins/errorHandler.js",
+    "/Users/resatugurulu/Developer/coregraph/src/services/graphEngine.js",
+    "/Users/resatugurulu/Developer/coregraph/src/services/paymentService.js",
+    "/Users/resatugurulu/Developer/coregraph/src/routes/graphRoutes.js",
+    "/Users/resatugurulu/Developer/coregraph/src/routes/paymentRoutes.js",
+    "/Users/resatugurulu/Developer/coregraph/src/routes/authRoutes.js"
+  ],
+  "sources": {
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/import.mjs": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/src/import.mts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/mock-service.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/src/mock-service.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/stack/dist/esm/index.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/stack/src/index.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/index.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/index.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/is-relative-require.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/is-relative-require.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/export-line.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/src/export-line.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/munge-mocks.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/src/munge-mocks.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/resolve-mock-entry-point.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/src/resolve-mock-entry-point.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/dist/esm/service-key.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/mock/src/service-key.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/stack/dist/esm/call-site-like.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/stack/src/call-site-like.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/stack/dist/esm/require-resolve.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/stack/src/require-resolve.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/get-all-conditional-values.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/get-all-conditional-values.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/get-all-conditions.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/get-all-conditions.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/get-unique-condition-sets.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/get-unique-condition-sets.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-all-exports.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/resolve-all-exports.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-all-local-imports.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/resolve-all-local-imports.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-conditional-value.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/resolve-conditional-value.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-import.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/resolve-import.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/is-windows.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/is-windows.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/errors.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/errors.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/file-exists.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/file-exists.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-dependency-export.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/resolve-dependency-export.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-package-import.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/resolve-package-import.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/to-file-url.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/to-file-url.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/to-path.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/to-path.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/get-named-exports-list.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/get-named-exports-list.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/read-pkg.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/read-pkg.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/resolve-export.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/resolve-export.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/star-glob.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/star-glob.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/find-dep-package.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/find-dep-package.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/get-conditional-values-list.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/get-conditional-values-list.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/stack/dist/esm/parse.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/@tapjs/stack/src/parse.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/walk-up-path/dist/mjs/index.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/walk-up-path/src/index.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/read-json.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/read-json.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/dist/esm/find-star-match.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/src/find-star-match.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/index.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/src/index.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/glob.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/src/glob.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/dist/esm/index.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/src/index.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/has-magic.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/src/has-magic.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/ignore.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/src/ignore.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/dist/esm/assert-valid-pattern.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/src/assert-valid-pattern.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/dist/esm/ast.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/src/ast.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/dist/esm/escape.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/src/escape.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/dist/esm/unescape.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/src/unescape.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/pattern.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/src/pattern.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/walker.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/src/walker.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/path-scurry/dist/esm/index.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/path-scurry/src/index.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/dist/esm/brace-expressions.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/minimatch/src/brace-expressions.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/lru-cache/dist/esm/index.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/lru-cache/src/index.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/minipass/dist/esm/index.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/minipass/src/index.ts"
+    ],
+    "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/dist/esm/processor.js": [
+      "/Users/resatugurulu/Developer/coregraph/node_modules/resolve-import/node_modules/glob/src/processor.ts"
+    ]
+  },
+  "root": "22eea98c-9fa3-4d45-978c-44209142d9d8",
+  "externalID": "test/routes/auth.test.js",
+  "code": 1,
+  "signal": null,
+  "runtime": 516.615
+}

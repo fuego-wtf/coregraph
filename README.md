@@ -1,106 +1,163 @@
-# Graphyn
+# coregraph
 
-A modern AI agent system with real-time event processing and context-aware prompting capabilities.
+a graph-based context service with real-time capabilities
 
-## Features
+## features
 
-- Event-driven microservices architecture
-- Real-time event streaming with Redis
-- Vector similarity search and relationship storage with Qdrant
-- High-performance REST API with Fastify
-- WebSocket support for real-time updates
-- Secure authentication and rate limiting
-- Context-aware AI prompting system
-- Near real-time updates (<5s latency)
+### core platform
 
-## Prerequisites
+- 🧠 **graph memory** - relationship-based memory storage
+- 🔄 **event system** - real-time event processing
+- 🔒 **auth** - jwt-based authentication
+- 📊 **rate limiting** - request throttling
+- 💾 **mock mode** - development with mock data
 
-- Docker (for running services)
-- Node.js 18+
-- Yarn
-- Redis (for event streaming)
-- Qdrant (for vector search and relationship storage)
-- OpenAI API key
+### tech stack
 
-## Quick Start
+- ⚡ **fastify** - high performance web framework
+- 🗄️ **supabase** - postgresql + real-time
+- 📦 **redis** - caching and rate limiting
+- 🔑 **jwt** - authentication
+- 🧪 **tap** - testing framework
+- 💳 **stripe** - payment processing
+- 📨 **svix** - webhook handling
+
+## getting started
+
+1. clone and install:
 
 ```bash
-# Start Redis
-docker run -d -p 6379:6379 --name redis redis:latest
-
-# Start Qdrant
-docker run -d -p 6333:6333 -v $(pwd)/qdrant_storage:/qdrant/storage qdrant/qdrant
-
-# Install dependencies
-yarn install
-
-# Configure environment
-cp .env.example .env
-# Edit .env with your OpenAI API key and other settings
-
-# Start development server
-yarn dev
-
-# Run tests
-yarn test
-
-# Build for production
-yarn build
+git clone https://github.com/yourusername/coregraph.git
+cd coregraph
+npm install
 ```
 
-## Architecture
+2. set up environment:
 
-The system consists of multiple microservices:
+```bash
+cp .env.example .env
+```
 
-### Core Services
-- **API Gateway (Fastify)**: Main entry point for client requests
-- **Event Stream (Redis)**: Handles real-time event processing and caching
-- **Vector/Relationship Service (Qdrant)**: 
-  - Manages vector embeddings for similarity search
-  - Stores relationships in payload data
-  - Provides quick context retrieval for AI prompts
-- **Auth Service**: Handles authentication and authorization
-- **Worker Service**: Processes background tasks
+3. start development (with mock mode):
 
-### Event Flow
-1. Client sends events to Redis stream
-2. Events are processed and stored in Qdrant with:
-   - Vector embeddings for similarity search
-   - Relationship data in the payload
-3. Context is retrieved from Qdrant for AI prompts
-4. Enriched prompts are sent to OpenAI
-5. Results are returned to client
+```bash
+npm run dev
+```
 
-## API Endpoints
+## architecture
 
-- `POST /events`: Submit new events
-- `POST /prompt`: Get AI response with context
-- `GET /search`: Search similar contexts
-- `POST /vectors/search`: Search vector embeddings
+### core concepts
 
-## Service Management
+- **graph storage** - nodes and edges with properties
+- **real-time events** - pub/sub system for updates
+- **caching** - redis for performance
+- **auth** - jwt with role-based access
+- **mock mode** - development without dependencies
 
-### Redis
-- Port: 6379
-- Used for: Event streaming, caching
-- Monitor: `redis-cli monitor`
+### plugins
 
-### Qdrant
-- REST API: http://localhost:6333
-- Used for: 
-  - Vector similarity search
-  - Relationship storage in payloads
-  - Context retrieval
-- Metrics: http://localhost:6333/metrics
+- **auth.js** - jwt authentication and session management
+- **redis.js** - caching and rate limiting with mock support
+- **supabase.js** - graph storage with mock support
+- **rateLimit.js** - request throttling
+- **errorHandler.js** - consistent error responses
 
-## Documentation
+### services
 
-- [API Reference](docs/api-reference.md)
-- [Architecture](docs/architecture.md)
-- [Deployment Guide](docs/deployment-handbook.md)
-- [Development Guide](docs/development-guide.md)
-- [Security Specifications](docs/security-specifications.md)
+- **graphEngine** - core graph operations and queries
+- **paymentService** - stripe payment processing
 
-## License
+### routes
 
-MIT 
+- **authRoutes** - authentication and session endpoints
+- **graphRoutes** - graph crud operations
+- **paymentRoutes** - payment processing endpoints
+
+## project structure
+
+```
+├── src/
+│   ├── plugins/        # fastify plugins
+│   │   ├── auth.js     # jwt auth
+│   │   ├── redis.js    # redis/mock
+│   │   └── supabase.js # db/mock
+│   ├── routes/         # api routes
+│   ├── services/       # business logic
+│   └── server.js       # entry point
+├── test/              # test files
+└── .env              # configuration
+```
+
+## api endpoints
+
+### auth
+
+- `POST /api/auth/login` - get jwt token
+- `GET /api/auth/session` - validate session
+- `POST /api/auth/webhook` - auth events
+
+### graph
+
+- `POST /api/nodes` - create node
+- `GET /api/nodes` - query nodes
+- `POST /api/edges` - create edge
+- `GET /api/edges` - query edges
+
+### payment
+
+- `POST /api/payment/create` - create payment intent
+- `POST /api/payment/webhook` - handle stripe events
+
+## development
+
+### mock mode
+
+set `MOCK_DB=true` in `.env` to use mock implementations
+
+### testing
+
+```bash
+npm test
+npm run test:watch
+npm run test:coverage
+```
+
+### environment variables
+
+```env
+# required
+PORT=3000
+JWT_SECRET=your-secret-key
+
+# optional (for mock mode)
+MOCK_DB=true
+
+# required for production
+REDIS_HOST=localhost
+REDIS_PORT=6379
+SUPABASE_URL=your-url
+SUPABASE_ANON_KEY=your-key
+STRIPE_SECRET_KEY=your-key
+```
+
+## deployment
+
+### docker
+
+```bash
+docker build -t coregraph .
+docker run -p 3000:3000 coregraph
+```
+
+### production checklist
+
+- [ ] set up proper secrets management
+- [ ] configure rate limiting
+- [ ] enable ssl/tls
+- [ ] set up monitoring
+- [ ] configure backups
+- [ ] implement ci/cd
+
+## license
+
+mit

@@ -1,0 +1,343 @@
+openapi: 3.0.0
+info:
+  title: Graphyn API
+  version: 1.0.0
+  description: API for Graphyn contextual intelligence platform
+
+servers:
+  - url: https://api.graphyn.xyz/v1
+    description: Production server
+  - url: http://localhost:3000/api/v1
+    description: Development server
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+
+  schemas:
+    Agent:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        systemPrompt:
+          type: string
+        context:
+          type: string
+        userId:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    Memory:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        content:
+          type: string
+        metadata:
+          type: object
+        embedding:
+          type: array
+          items:
+            type: number
+        agentId:
+          type: string
+        userId:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+
+paths:
+  /agents:
+    get:
+      summary: List agents
+      security:
+        - BearerAuth: []
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+        - in: query
+          name: limit
+          schema:
+            type: integer
+      responses:
+        200:
+          description: List of agents
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Agent'
+    
+    post:
+      summary: Create agent
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - systemPrompt
+              properties:
+                name:
+                  type: string
+                systemPrompt:
+                  type: string
+                context:
+                  type: string
+      responses:
+        201:
+          description: Agent created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agent'
+
+  /agents/{agentId}:
+    parameters:
+      - in: path
+        name: agentId
+        required: true
+        schema:
+          type: string
+    
+    get:
+      summary: Get agent by ID
+      security:
+        - BearerAuth: []
+      responses:
+        200:
+          description: Agent details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agent'
+
+    put:
+      summary: Update agent
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agent'
+      responses:
+        200:
+          description: Agent updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agent'
+
+    delete:
+      summary: Delete agent
+      security:
+        - BearerAuth: []
+      responses:
+        204:
+          description: Agent deleted
+
+  /agents/{agentId}/memories:
+    parameters:
+      - in: path
+        name: agentId
+        required: true
+        schema:
+          type: string
+    
+    get:
+      summary: List agent memories
+      security:
+        - BearerAuth: []
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+        - in: query
+          name: limit
+          schema:
+            type: integer
+      responses:
+        200:
+          description: List of memories
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Memory'
+
+    post:
+      summary: Create memory
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - content
+              properties:
+                content:
+                  type: string
+                metadata:
+                  type: object
+      responses:
+        201:
+          description: Memory created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Memory'
+
+  /agents/{agentId}/query:
+    post:
+      summary: Query agent memories
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - query
+              properties:
+                query:
+                  type: string
+                limit:
+                  type: integer
+                  default: 10
+      responses:
+        200:
+          description: Query results
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Memory'
+
+  /agents/{agentId}/chat:
+    post:
+      summary: Chat with agent
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - message
+              properties:
+                message:
+                  type: string
+                context:
+                  type: string
+      responses:
+        200:
+          description: Agent response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: string
+                  context:
+                    type: string
+                  memories:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Memory'
+
+  /agents/{agentId}/config:
+    get:
+      summary: Get agent configuration
+      security:
+        - BearerAuth: []
+      parameters:
+        - in: path
+          name: agentId
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Agent configuration
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  systemPrompt:
+                    type: string
+                  context:
+                    type: string
+                  settings:
+                    type: object
+                    additionalProperties: true
+
+    put:
+      summary: Update agent configuration
+      security:
+        - BearerAuth: []
+      parameters:
+        - in: path
+          name: agentId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                systemPrompt:
+                  type: string
+                context:
+                  type: string
+                settings:
+                  type: object
+                  additionalProperties: true
+      responses:
+        200:
+          description: Configuration updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agent' 
